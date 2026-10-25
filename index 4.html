@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welfare State Simulator — Rifah Dövləti Qurucusu</title>
+  <meta name="description" content="Sosial siyasətin dörd modelini öyrənmək, müqayisə etmək və öz rifah dövlətini yaratmaq üçün tədris simulyasiyası.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Əsas məzmuna keç</a>
+
+  <!-- Üst panel: taymer, mərhələ göstəricisi, tamamlanma faizi (oyun başlayandan sonra görünür) -->
+  <header id="appHeader" class="app-header no-print" hidden>
+    <div class="hdr-inner">
+      <div class="brand"><span class="brand-mark">WS</span><span class="brand-name">Welfare State Simulator</span></div>
+      <ol class="stage-pills" aria-label="Mərhələlər">
+        <li id="pill1">1 · Modelləri qur</li>
+        <li id="pill2">2 · Öz modelin</li>
+        <li id="pill3">3 · Yekun</li>
+      </ol>
+      <div class="timer" id="timerBox" role="timer" aria-label="Qalan vaxt">
+        <span class="timer-label">Qalan vaxt</span>
+        <span id="timerValue" class="timer-value">25:00</span>
+        <span id="timerSub" class="timer-sub"></span>
+      </div>
+    </div>
+    <div class="progress-wrap">
+      <div id="progressBar" class="progress" role="progressbar" aria-label="Tamamlanma faizi" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progressFill" class="progress-fill"></div></div>
+      <span id="progressText" class="progress-text">Tamamlanma: 0%</span>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <div id="toasts" class="toasts no-print" aria-live="polite"></div>
+  <div id="modalRoot" class="no-print"></div>
+
+  <noscript><p style="padding:2rem">Bu oyun işləmək üçün JavaScript tələb edir. Zəhmət olmasa brauzerinizdə JavaScript-i aktiv edin.</p></noscript>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
